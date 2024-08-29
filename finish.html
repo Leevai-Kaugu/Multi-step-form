@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <img src="images\bg-sidebar-desktop.svg" alt="desktop Bg" class="desktopImg">
+      <img src="images\bg-sidebar-mobile.svg" alt="mobile" class="mobileImg">
+      <aside>
+        <div class="textDiv">
+         <h2>1</h2>
+         <div class="textDiv2">
+          <h4>STEP 1</h4>
+          <h3>YOUR INFO</h3>
+         </div> 
+        </div>
+        <div class="textDiv">
+          <h2>2</h2>
+           <div class="textDiv2">
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+           </div> 
+        </div>
+        <div class="textDiv">
+          <h2>3</h2>
+          <div class="textDiv2">
+           <h4>STEP 3</h4>
+           <h3>ADD-ONS</h3>
+          </div> 
+        </div>
+        <div class="textDiv">
+          <h2>4</h2>
+          <div class="textDiv2">
+           <h4>STEP 4</h4>
+           <h3>SUMMARY</h3>
+          </div> 
+        </div>
+      </aside>
+    </nav>
+   
+   <section class="finish_container">
+    <div>
+      <div>
+        <img src="images\icon-thank-you.svg" alt="done icon">
+      </div>
+      <h1>Thank you!</h1>
+      <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com </p>
+    </div>      
+    
+   </section>
+  </main>
+
+
+  <script>
+    const asideZ = document.querySelector('aside');
+    let numz = asideZ.querySelectorAll('h2');
+    numz[3].style.backgroundColor = 'hsl(206, 94%, 87%)'
+    numz[3].style.color = 'hsl(243, 100%, 62%)'
+
+  </script>
+</body>
+</html>

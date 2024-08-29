@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <img src="images\bg-sidebar-desktop.svg" alt="desktop Bg" class="desktopImg">
+      <img src="images\bg-sidebar-mobile.svg" alt="mobile" class="mobileImg">
+      <aside>
+        <div class="textDiv">
+         <h2>1</h2>
+         <div class="textDiv2">
+          <h4>STEP 1</h4>
+          <h3>YOUR INFO</h3>
+         </div> 
+        </div>
+        <div class="textDiv">
+          <h2>2</h2>
+           <div class="textDiv2">
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+           </div> 
+        </div>
+        <div class="textDiv">
+          <h2>3</h2>
+          <div class="textDiv2">
+           <h4>STEP 3</h4>
+           <h3>ADD-ONS</h3>
+          </div> 
+        </div>
+        <div class="textDiv">
+          <h2>4</h2>
+          <div class="textDiv2">
+           <h4>STEP 4</h4>
+           <h3>SUMMARY</h3>
+          </div> 
+        </div>
+      </aside>
+    </nav>
+   
+   <section class="summary_container">
+    <form id="summary" class="summary" action="finish.html" method="get">
+      <div>
+        <h1>Finishing up</h1>
+        <p style="font-size: 1.5rem;">Double-check everything looks OK before confirming</p>
+      </div>
+      <div class="summary_tab" id="summary_tab">
+        <div class="plan_tab">
+          <div>
+            <h3 class="plan_text"></h3>
+            <a href="plan.html">Change</a>
+          </div>
+          <h3 class="plan_price">$9/mo</h3>
+        </div>
+        <div class="add_ons_tab">
+          <div class="add_ons_text"></div>
+          <div class="add_ons_price"></div>
+        </div>
+      </div>
+      <div class="add_ons_total">
+        <div class="total"></div>
+        <div class="total_price"></div>
+      </div>
+    </form>
+    <div class="btnsWrapper">
+      <button id="bckPgeAddOns" onclick="prev_page_addOns()">Go Back</button>
+      <button class="fwdPgeFnsh" id="fwdPgeFnsh" onclick="next_page_finish()" style="background-color: hsl(243, 100%, 62%);">Confirm</button>
+    </div>
+   </section>
+  </main>
+
+
+  
+  <script src="summary.js"></script>
+</body>
+</html>

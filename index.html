@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <img src="images\bg-sidebar-desktop.svg" alt="desktop Bg" class="desktopImg">
+      <img src="images\bg-sidebar-mobile.svg" alt="mobile" class="mobileImg">
+      <aside>
+        <div class="textDiv">
+         <h2>1</h2>
+         <div class="textDiv2">
+          <h4>STEP 1</h4>
+          <h3>YOUR INFO</h3>
+         </div> 
+        </div>
+        <div class="textDiv">
+          <h2>2</h2>
+           <div class="textDiv2">
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+           </div> 
+        </div>
+        <div class="textDiv">
+          <h2>3</h2>
+          <div class="textDiv2">
+           <h4>STEP 3</h4>
+           <h3>ADD-ONS</h3>
+          </div> 
+        </div>
+        <div class="textDiv">
+          <h2>4</h2>
+          <div class="textDiv2">
+           <h4>STEP 4</h4>
+           <h3>SUMMARY</h3>
+          </div> 
+        </div>
+      </aside>
+    </nav>
+    <section>
+      <form action="plan.html" method="get" class="info" onsubmit="return validate()">
+        <div class="setAlign">
+          <h1>Personal info</h1>
+          <p>Please provide your name,email address, and phone number.</p>
+        </div>
+        <div class="setAlign">
+          <div class="lbl">
+            <label for="clientName">Name</label>
+            <span id="nameSpn"></span>
+          </div>
+          <input type="text" name="clientName" id="clientName" placeholder="e.g. Stephen King">
+        </div>
+        <div class="setAlign">
+          <div class="lbl">
+            <label for="email">Email Address</label>
+            <span id="mailSpn"></span>
+          </div>
+          <input type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+        </div>
+        <div class="setAlign">
+          <div class="lbl">
+            <label for="number">Phone Number</label>
+            <span id="numSpn"></span>
+          </div>
+          <input type="text" name="phnNumber" id="phnNumber" placeholder="e.g. +1 234 567890">
+        </div>
+        
+      </form>
+      <div class="infoBtn">
+        <button onclick="return validate()">Next Step</button>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="validate.js"></script>
+</body>
+</html>

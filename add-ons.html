@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <img src="images\bg-sidebar-desktop.svg" alt="desktop Bg" class="desktopImg">
+      <img src="images\bg-sidebar-mobile.svg" alt="mobile" class="mobileImg">
+      <aside>
+        <div class="textDiv">
+         <h2>1</h2>
+         <div class="textDiv2">
+          <h4>STEP 1</h4>
+          <h3>YOUR INFO</h3>
+         </div> 
+        </div>
+        <div class="textDiv">
+          <h2>2</h2>
+           <div class="textDiv2">
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+           </div> 
+        </div>
+        <div class="textDiv">
+          <h2>3</h2>
+          <div class="textDiv2">
+           <h4>STEP 3</h4>
+           <h3>ADD-ONS</h3>
+          </div> 
+        </div>
+        <div class="textDiv">
+          <h2>4</h2>
+          <div class="textDiv2">
+           <h4>STEP 4</h4>
+           <h3>SUMMARY</h3>
+          </div> 
+        </div>
+      </aside>
+    </nav>
+   
+    <section>
+      <form id="addOns" class="addOns" action="summary.html" method="get">
+        <div>
+          <h1>Pick add-ons</h1>
+          <p style="font-size: 1.7rem;">Add-ons help enhance your gaming experience</p>
+        </div>
+        <div class="addOnsOptns" id="addOnsOptns">
+          <div class="optBox" id="onlineServ">
+            <input type="checkbox" id="Online Service" class="onLine" value="1">
+            <label for="Online Service" class="online"></label>
+            <div style="margin: 0%;">
+              <h3>Online Service</h3>
+              <p>Access to multiplayer games</p>
+            </div>
+            <span class="onlineSpn"></span>
+          </div>
+          <div class="optBox" id="xStorage">
+            <input type="checkbox" id="Larger Storage" value="2">
+            <label for="Larger Storage" class="storage"></label>
+            <div style="margin: 0%;">
+              <h3>Extra 1TB of cloud save</h3>
+              <p>Access to multiplayer games</p>
+            </div>
+            <span class="storageSpn"></span>
+          </div>
+          <div class="optBox" id="Customize Profile">
+            <input type="checkbox" id="Customizable Profile" value="2">
+            <label for="Customizable Profile" class="customize"></label>
+            <div style="margin: 0%;">
+              <h3>Custom theme on your profile</h3>
+              <p>Access to multiplayer games</p>
+            </div>
+            <span class="customizeSpn"></span>
+          </div>
+        </div>
+      </form>
+      <div class="btnsWrapper">
+        <button class="bckPgePln" onclick="prev_page_plan()">Go Back</button>
+        <button class="fwdPgeFnsh" id="fwdPgeFnsh" onclick="next_page_summary()">Next Step</button>
+      </div>
+    </section>
+  </main>
+
+
+  
+
+  <script src="add-ons.js"></script>
+</body>
+</html>

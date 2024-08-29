@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body class="wrapperMain">
+    <div class="side-right">
+        <div class="step-title">
+            <H1>Select your plan</H1>
+            <!-- <br> -->
+            <p> you have the option of monthly or yearly biling.</p>
+        </div>
+        <div class="plan-cards">
+            <div name="boxUno" class="box-card" onclick="highlightBox()">
+                <img src="images\icon-arcade.svg" alt="arcade logo">    
+                <p>
+                    <h3> &nbsp; Arcade</h3>
+                    <h6> $9/mo</h6>
+                    <h5 id="lost"> &nbsp; 2 months free</h5>
+                </p>
+                <!-- <p>2 months free</p> -->
+            </div>
+            <div class="box-card" onclick="highlightBox()">
+                <img src="images\icon-advanced.svg" alt="advanced icon"> 
+                <p>
+                    <h3> &nbsp; Advanced</h3>
+                    <h6> $12/mo</h6>
+                    <h5 id="gost"> &nbsp; 2 months free</h5>
+                </p>
+                <button onclick="highlightBox()"></button>
+            </div>
+            <div class="box-card" onclick="highlightBox()">
+                <img src="images\icon-pro.svg" alt="pro icon">
+                <p>
+                    <h3> &nbsp; Pro</h3>
+                    <h6> $15/mo</h6>
+                    <h5 id="jost"> &nbsp; 2 months free</h5>
+                </p>
+            </div>
+        </div>
+        
+        <form class="form-box">
+            <p id="Montly">Monthly</p>
+            <label class="toggle" for="monthly"> 
+                <input class="toggle-input" type="checkbox" id="monthly" onclick="switchToggle(),switchColor()">
+                <div class="toggle-fill"></div>
+            </label>
+            <p id="Yearly">&nbsp; &nbsp; Yearly</p>
+    </div>
+        
+    
+</body>
+</html>

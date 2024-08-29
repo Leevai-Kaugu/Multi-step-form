@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <img src="images\bg-sidebar-desktop.svg" alt="desktop Bg" class="desktopImg">
+      <img src="images\bg-sidebar-mobile.svg" alt="mobile" class="mobileImg">
+      <aside>
+        <div class="textDiv">
+         <h2>1</h2>
+         <div class="textDiv2">
+          <h4>STEP 1</h4>
+          <h3>YOUR INFO</h3>
+         </div> 
+        </div>
+        <div class="textDiv">
+          <h2>2</h2>
+           <div class="textDiv2">
+            <h4>STEP 2</h4>
+            <h3>SELECT PLAN</h3>
+           </div> 
+        </div>
+        <div class="textDiv">
+          <h2>3</h2>
+          <div class="textDiv2">
+           <h4>STEP 3</h4>
+           <h3>ADD-ONS</h3>
+          </div> 
+        </div>
+        <div class="textDiv">
+          <h2>4</h2>
+          <div class="textDiv2">
+           <h4>STEP 4</h4>
+           <h3>SUMMARY</h3>
+          </div> 
+        </div>
+      </aside>
+    </nav>
+    <section>
+      <form class="plan" id="plan" action="add-ons.html" method="get" onsubmit="switchAddOns()">
+        <div class="topDawg">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly biling</p>
+        </div>
+        <div class="planOptions" id="planOptions">
+          <div class="arcade" id="Arcade">
+            <img src="/images\icon-arcade.svg" alt="arcade icon">
+            <p>Arcade</p>
+            <span class="arcSpn">$9/mo</span>
+            <span class="arcSpn1"></span>
+          </div>
+          <div class="Advanced" id="Advanced">
+            <img src="/images\icon-advanced.svg" alt="advanced icon">
+            <p>Advanced</p>
+            <span class="advSpn">$12/mo</span>
+            <span class="advSpn1"></span>
+          </div>
+          <div class="Pro" id="Pro">
+            <img src="/images\icon-pro.svg" alt="pro icon">
+            <p>Pro</p>
+            <span class="proSpn">$15/mo</span>
+            <span class="proSpn1"></span>
+          </div>
+        </div>
+        <div class="togglewrapper">
+         <div class="toggle_container">
+          <p id="monthlyP" style="color: hsl(213, 96%, 18%);">Monthly</p>
+          <div style="margin: 0px;">
+            <input type="checkbox" id="checkBoxed" class="toggle" onclick="return isToggleChecked()">
+            <label for="checkBoxed" class="check" id="check"></label>
+          </div>
+          <p id="yearlyP">Yearly</p>
+         </div>
+        </div>
+      </form>
+      <div class="btnsWrapper">
+        <button class="bckPgeVrfy" onclick="prev_page_vrfy()">Go Back</button>
+        <button class="fwdPgeAddOns" id="fwdPgeAddOns" onclick="next_page_addOns()">Next Step</button>
+      </div>
+    </section>
+  </main>
+
+
+  
+  <script src="plan.js"></script>
+</body>
+</html>

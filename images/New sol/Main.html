@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="New.css"
+    <title></title>
+    <script
+ 
+  <script defer src="infoValidation.js"></script>
+  <script defer src="plan.js"></script>
+  <script defer src="add-on.js"></script>
+  <script defer src="finish.js"></script> 
+  <script defer src="sidebar.js"></script>  
+</head>
+<body>
+   <div class="wrapperMain">
+    <div Class="aside-left">
+        <img src="images\bg-sidebar-desktop.svg" alt="background">
+         
+            <div class="steps-left">
+                <div>
+                        <div class="step-no">1</div>
+                        <h4>STEP 1</h4>
+                        <P>YOUR INFO</P>
+                </div>
+                <div>
+                        <div class="step-no">2</div>
+                        <h4>STEP 2</h4>
+                        <P>SELECT PLAN</P>
+                    
+                </div>
+                <div>
+                    <div class="step-no">3</div>
+                    <h4>STEP 3</h4>
+                    <P>ADD-ONS</P>
+                </div>
+                <div>
+                    <div class="step-no">4</div>
+                    <h4>STEP 4</h4>
+                    <P>SUMMARY</P>
+                </div>
+    </div>
+
+    
+    <div class="side-right">
+            <!-- INFO FORM -->
+            <form action="/" id="info" class="Info">
+                <div>
+                    <h1>Personal info</h1>
+                    <p>Please provide your name, email adrress and phone number</p>
+                </div>
+                <div class="input-control">
+                    <div>
+                        <label for="username">User name</label>
+                        <div class="error"></div>
+                    </div>
+                    <input autocomplete="off" type="text" name="username" id="username" placeholder=" e.g Lady luck">
+                </div>
+                <div class="input-control">
+                    <div>
+                        <label for="useremail">Email adrress</label>
+                        <div class="error"></div>
+                    </div>
+                    <input type="text" name="useremail" id="useremail" placeholder=" e.g ladyluck@gmail.com">
+                </div>
+                <div class="input-control">
+                    <div>
+                        <label for="number">Phone number</label>
+                        <div class="error"></div>
+                    </div>
+                    <input type="text" name="number" id="number" placeholder=" 07123456789">
+                </div>
+                <button type="submit">Next</button>
+
+
+
+
+            </form>
+           
+   
+
+
+            <!-- PLAN FORM -->
+            <div class="plan">
+                <div class="step-title">
+                    <H1>Select your plan</H1>
+                    <!-- <br> -->
+                    <p> you have the option of monthly or yearly biling.</p>
+                </div>
+                <div class="plan-cards" id="plan-selected">
+                    <div class="box-card" id="Arcade" onclick="getId(this)">
+                        <img src="images\icon-arcade.svg" alt="arcade logo">    
+                        <p>
+                            <h3> &nbsp; Arcade</h3>
+                            <h6> $9/mo</h6>
+                            <h5 id="lost"> &nbsp; 2 months free</h5>
+                        </p>
+                    </div>
+                    <div class="box-card" id="Advanced"onclick="getId(this)">
+                        <img src="images\icon-advanced.svg" alt="advanced icon"> 
+                        <p>
+                            <h3> &nbsp; Advanced</h3>
+                            <h6> $12/mo</h6>
+                            <h5 id="gost"> &nbsp; 2 months free</h5>
+                        </p>
+                        
+                    </div>
+                    <div class="box-card" id="Pro"onclick="getId(this)">
+                        <img src="images\icon-pro.svg" alt="pro icon">
+                        <p>
+                            <h3> &nbsp; Pro</h3>
+                            <h6> $15/mo</h6>
+                            <h5 id="jost"> &nbsp; 2 months free</h5>
+                        </p>
+                    </div>
+                </div>
+                
+                <form class="form-box">
+                    <p id="Montly">Monthly</p>
+                    <label class="toggle" for="monthly"> 
+                        <input class="toggle-input" type="checkbox" id="monthly" onclick="switchToggle(),switchColor()">
+                        <div class="toggle-fill"></div>
+                    </label>
+                    <p id="Yearly">&nbsp; &nbsp; Yearly</p>
+                </form>
+
+                <button style="padding: 10px 7px;" id="plan-nxt">Next</button>
+                <button id="back-btn">Go Back</button>
+                <!-- <button type="submit" style="padding: 10px 7px;" id="plan-nxt">Next</button>
+                <button id="back-btn">Go Back</button> -->
+            </div>
+            
+
+
+            <!-- ADD ONS -->
+            
+            <div id="add" class="add-ons-container">
+               <div id="add-ons-container">
+                <div class="pick">
+                    <h1>Pick add-ons</h1>
+                    <p>Add-ons help enhance your gaming experience</p>
+                </div>
+
+
+                <div class="add-on-box active-box" id="Online Service">
+                    <input type="checkbox" name="online" id="online" value="Online Service" class="checkbox" >
+                    <label for="online" class="listed" style="margin-right: 80px;">
+                        <h3>Online service</h3>
+                        <h6>Access to multiplayer games</h6>
+                    </label>
+                    <h5> +$1/mo</h5>
+                </div>
+
+
+                <div class="add-on-box" id="Larger Storage" >
+                    <input type="checkbox" name="storage" id="storage" value="Larger Storage" class="checkbox" >
+                    <label for="storage" class="listed" style="margin-right: 100px;">
+                        <h3>Larger storage</h3>
+                        <h6>Extra 1TB of cloud save</h6>
+                    </label>
+                    <h5> +$2/mo</h5>
+                </div>
+
+                <div class="add-on-box" id="Customizable Profile">
+                    <input type="checkbox" name="customize" id="customize" value="Customizable Profile" class="checkbox" >
+                    <label for="customize" class="listed" style="margin-right: 60px;">
+                        <h3>Customizable Profile</h3>
+                        <h6>Custom theme on your profile</h6>
+                    </label>
+                    <h5> +$2/mo</h5>
+                </div>
+               </div>
+
+                <div class="add-btns">
+                    <button id="add-back-btn">Go Back</button>
+                    <button  id="add-nxt">Next Step</button>
+                    <!-- <button id="add-back-btn">Go Back</button>
+                    <button type="submit" id="add-nxt"> Next Step</button> -->
+                </div>
+
+            </div>
+            
+            <!-- CHECKOUT -->
+            <div class="finishing-up" id="finish_up">
+                <div class="finish-top">
+                    <h1>Finishing up</h1>
+                    <p>Double-check everything looks OK before confirming</p>
+                </div>
+                <div class="total-style">
+                    <div class="styled">
+                        <div class="arcade-amount">
+                            <div class="arcade-style">
+                                <h5 id="text-1">Arcades(Monthly)</h5>
+                                <a href="">change</a>
+                            </div>
+                            <div class="arcade-total" id="amount-1">30$</div>
+                        </div>
+                        <div class="add-amount">
+                            <div class="online-amount one">
+                                <div>
+                                    <p id="text-2">Online service</p>
+                                </div>
+                                <div class="online-total" id="amount-2">20</div>
+                            </div>
+                            <div class="online-amount two">
+                                <div>
+                                    <p id="text-3">Larger storage</p>
+                                </div>
+                                <div class="storage-total" id="amount-3">+$20/mo</div>
+                            </div>
+                            <div class="online-amount three">
+                                <div>
+                                    <p id="text-4">Customizable Profile</p>
+                                </div>
+                                <div class="custom-total" id="amount-4">+$20/mo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Total">
+                        <p>Total (per month)</p>
+                        <h3 id="total-text">80$</h3>
+                    </div>
+                </div>
+
+
+                <div class="finish-btns">
+                    <button id="finish-back-btn">Go Back</button>
+                    <button type="submit"> Next Step</button>
+                </div>
+            </div>
+
+    </div>
+    
+   </div>
+    
+   
+   
+    
+</body>
+
+</html>
